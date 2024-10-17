@@ -1,7 +1,5 @@
 package org.BoogieNaipe;
 
-import org.BoogieNaipe.ASCII.TituloInicial;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,6 +10,7 @@ public class Jogo {
     JPanel tituloInicialPanel, startBotaoPanel;
     JButton startBotao;
     Font fontNormal = new Font ("TimesRoman", Font.PLAIN, 20);
+    Font fontTitulo = new Font ("TimesRoman", Font.BOLD, 50);
 
 
     public static void main(String[] args) {
@@ -31,8 +30,9 @@ public class Jogo {
         tituloInicialPanel.setBounds(100, 100, 600, 150);
         tituloInicialPanel.setBackground(Color.black);
 
-        JLabel tituloLabel = new JLabel(TituloInicial.getTexto());
+        JLabel tituloLabel = new JLabel("AVENTURA!");
         tituloLabel.setForeground(Color.white);
+        tituloLabel.setFont(fontTitulo);
 
         startBotaoPanel = new JPanel();
         startBotaoPanel.setBounds(300,400,200,100);
@@ -56,6 +56,11 @@ public class Jogo {
 
 
         janela.setVisible(true);
+
+    }
+    public void criarTelaJogo(){
+               
+
 
     }
 }
